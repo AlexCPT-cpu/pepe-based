@@ -6,7 +6,7 @@ import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,15 +141,21 @@ const Hero = () => {
             </a>{" "}
             :)
           </Desc>
-          <button
-            onClick={() => handleScrollToTarget("tokenomics")}
-            className="whitespace-nowrap cursor-pointer rounded-lg p-3 color-white bg-[#da4ea2] w-32"
-          >
-            Learn More
-          </button>
+          <div className="flex flex-row space-x-6">
+            {" "}
+            <button
+              onClick={() => handleScrollToTarget("tokenomics")}
+              className="whitespace-nowrap cursor-pointer rounded-lg p-3 color-white bg-[#da4ea2] w-32"
+            >
+              Learn More
+            </button>
+            <button className="whitespace-nowrap cursor-pointer rounded-lg p-3 color-white bg-[#da4ea2] w-32">
+              <a href="/">LitePaper</a>
+            </button>
+          </div>
         </Left>
         <Right>
-          <Canvas>
+          {/* <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
@@ -163,7 +169,7 @@ const Hero = () => {
                 />
               </Sphere>
             </Suspense>
-          </Canvas>
+          </Canvas> */}
           <Img
             className="lg:top-0 lg:bottom-1 lg:right-0 bottom-[720px] right-8"
             src="./gallery/hero.png"

@@ -27,7 +27,7 @@ const Steps = ({ text, step, link, contract }) => {
     <>
       {contract ? (
         <div className="h-full">
-          <div className="mt-10 text-[25px] text-white transition-all ease-in-out delay-75">
+          <div className="mt-10 text-[15px] px-5 lg:text-[25px] text-white transition-all ease-in-out delay-75">
             Once your wallet is connected, select the token swap feature on
             PancakeSwap. In the "From" field, choose BNB as the currency to
             swap. In the "To" field, paste the $APEPE contract address:{" "}
@@ -42,7 +42,7 @@ const Steps = ({ text, step, link, contract }) => {
             . Set the desired amount of $APEPE tokens you want to buy and click
             the "Swap" button.
           </div>
-          <Desc className="font-semibold text-[15px] transition-all ease-in-out delay-75">
+          <Desc className="font-semibold text-[13px] text-center items-center justify-center whitespace-nowrap flex lg:text-[15px] transition-all ease-in-out delay-75">
             Step {step}
           </Desc>
         </div>

@@ -89,7 +89,7 @@ const Who = () => {
   };
 
   return (
-    <Section id="tokenomics">
+    <Section id="tokenomics" className="relative">
       <Container>
         <Left>
           <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
@@ -102,7 +102,7 @@ const Who = () => {
           </Canvas>
         </Left>
         <Right>
-          <Title>Tokenomics</Title>
+          <Title className="absolute top-2 lg:top-32">Tokenomics</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>Network:</Subtitle>

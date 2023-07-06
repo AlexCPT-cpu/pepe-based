@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Bars3Icon } from "@heroicons/react/24/solid";
+import Dialog from "./Dialog";
 
 const Section = styled.div`
   display: flex;
@@ -76,6 +78,16 @@ const Navbar = () => {
     }
   };
 
+  const handleOpen = () => {
+    const modal = document.querySelector("[data-modal]");
+    modal.showModal();
+  };
+
+  const handleClose = () => {
+    const modal = document.querySelector("[data-modal]");
+    modal.close();
+  };
+
   return (
     <Section id="home">
       <Container>
@@ -88,9 +100,14 @@ const Navbar = () => {
             <ListItem onClick={() => handleScrollToTarget("home")}>
               Home
             </ListItem>
-            <ListItem>Litepaper</ListItem>
+            <ListItem>
+              <a href="/">Litepaper</a>
+            </ListItem>
             <ListItem onClick={() => handleScrollToTarget("contact")}>
               Contact
+            </ListItem>
+            <ListItem onClick={() => handleScrollToTarget("roadmap")}>
+              Roadmap
             </ListItem>
           </List>
         </Links>
@@ -100,11 +117,14 @@ const Navbar = () => {
             href="https://pancakeswap.finance/swap?outputCurrency=0x463464927671a2e8d406A1a3E64093D42a181C44"
             rel="noreferrer"
             target="_blank"
+            className="hidden lg:block"
           >
             <button className="whitespace-nowrap cursor-pointer rounded-lg p-3 color-white bg-[#da4ea2]">
               Buy $APEPE on PCS
             </button>
           </a>
+          <Bars3Icon onClick={handleOpen} className="w-9" />
+          <Dialog handleClose={handleClose} />
         </Icons>
       </Container>
     </Section>

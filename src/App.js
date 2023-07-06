@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Disclaimer from "./components/Disclaimer";
+import Roadmap from "./components/Roadmap";
 
 const Container = styled.div`
   height: 100vh;
@@ -30,6 +31,7 @@ function App() {
       <Hero />
       <Who />
       <Works />
+      <Roadmap />
       <Contact />
       <Disclaimer />
     </Container>
