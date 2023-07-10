@@ -10,8 +10,6 @@ const Section = styled.section`
   background-color: ${(props) => props.theme.text};
   position: relative;
   scroll-snap-align: start;
-  padding-bottom: 200px;
-  margin-bottom: 200px;
 `;
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxl};

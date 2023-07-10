@@ -10,8 +10,6 @@ import Disclaimer from "./components/Disclaimer";
 import Roadmap from "./components/Roadmap";
 
 const Container = styled.div`
-  height: 100vh;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
   scrollbar-width: none;
@@ -27,7 +25,7 @@ function App() {
     AOS.init();
   }, []);
   return (
-    <Container>
+    <Container className="bg-no-repeat bg-contain">
       <Hero />
       <Who />
       <Works />
